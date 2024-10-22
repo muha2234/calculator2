@@ -1,0 +1,145 @@
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: black;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+#container {
+   width: 90%;
+   max-width: 1000px;
+   height: auto;
+   background-image: url('back 3.jpg');
+   margin: 20px auto;
+   background-size: cover;
+   background-position: center;
+   text-align: center; /* Center the title */
+}
+
+#title {
+   color: white;
+   font-size: 2rem;
+   margin-bottom: 20px; /* Add space below the title */
+}
+
+#calculator {
+   width: 100%;
+   max-width: 320px;
+   height: auto;
+   background-color: #eaedef;
+   margin: 0 auto;
+   position: relative;
+   border-radius: 5px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 20px;
+}
+
+#result {
+   height: auto;
+}
+
+#history {
+   text-align: right;
+   margin: 0 20px;
+   padding-top: 10px;
+   font-size: 1rem;
+   color: #919191;
+}
+
+#output {
+   text-align: right;
+   margin: 10px 20px;
+   font-size: 1.875rem;
+}
+
+#keyboard {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 10px;
+}
+
+.operator, .number, .empty {
+   width: 22%;
+   height: 50px;
+   margin: 10px 1%;
+   border-radius: 50%;
+   border: none;
+   font-weight: bold;
+   font-size: 1rem;
+   text-align: center;
+   line-height: 50px;
+   cursor: pointer;
+   display: inline-block;
+}
+
+.number, .empty {
+   background-color: #eaedef;
+}
+
+.operator {
+   background-color: #d4d4d4;
+}
+
+.operator:active, .number:active {
+   font-size: 0.875rem;
+}
+
+.operator:focus, .number:focus, .empty:focus {
+   outline: 0;
+}
+
+button:nth-child(4) {
+   background-color: #20b2aa;
+}
+button:nth-child(8) {
+   background-color: #ffa500;
+}
+button:nth-child(12) {
+   background-color: #f08080;
+}
+button:nth-child(16) {
+   background-color: #7d93e0;
+}
+button:nth-child(20) {
+   background-color: #9477af;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+   #calculator {
+       max-width: 320px;
+   }
+
+   .operator, .number, .empty {
+       width: 22%;
+       height: 45px;
+   }
+
+   #output {
+       font-size: 1.5rem;
+   }
+}
+
+@media (max-width: 480px) {
+   #calculator {
+       max-width: 280px;
+   }
+
+   .operator, .number, .empty {
+       width: 22%;
+       height: 40px;
+   }
+
+   #output {
+       font-size: 1.25rem;
+   }
+
+   #history {
+       font-size: 0.875rem;
+   }
+}
